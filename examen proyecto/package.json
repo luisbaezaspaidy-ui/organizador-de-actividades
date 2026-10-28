@@ -1,0 +1,12 @@
+{
+  "name": " gestor-tareas",
+  "version": "1.0.0",
+  "description": "Aplicacion web paa gestionar actividades de empleados",
+  "main": "backend/app.js"
+  "scripts": {
+    "start": "none backend/app.js"
+  },
+  "dependencies": {
+    "express": " ^4.21.2"
+  }
+}

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" 
+xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"
+          content="width=device-width,
+          inital-scale=1.0">
+    <title>Gestor de tareas</title>
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestor de tareas</h1>
+        <p>Administracion de actividades de empleados</p>
+        </header>
+
+    <main>
+        <section class="contenedor">
+            <h2>Registrar actividad</h2>
+
+            <form id="formTarea">
+                <input type="hidden"
+                       id="idTarea">
+
+                <label
+                       for="estado">Nombre de la actividad:</label>
+                <input type="text" id="nombre" required maxlength="100">
+
+                <label
+                       for="descripcion">Descripcion</label>
+                <textarea id="descripcion" required maxlength="500"></textarea>
+
+                <label
+                       for="Estado">Estado</label>
+                <select id="estado" required>
+
+                    <option
+                            value="pendiente">Pendiente</option>
+                    <option value="En proceso">En proceso</option>
+                    <option
+                            value="Terminado">Terminado</option>
+                    </select>
+
+
+                <button type="submit" id="btnGuardar">Registrar actividad</button>
+                <button type="button" id="btnCancelar" hidden>Cancelar edicion</button>
+                </form>
+            </section>
+
+        <section class="contenedor">
+            <h2>Actividad registrada</h2>
+
+            <button type="button" id="btnActualizar">
+                Consultar actividades
+                </button>
+            <div id="listaTareas"></div>
+            </section>
+        </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
