@@ -1,109 +1,158 @@
-﻿* {
+﻿/* Configuración general de los elementos */
+* {
     box-sizing: border-box;
 }
 
+/* Fondo y letra de la página */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #263238;
+    background-color: #F4F1ED;
+    color: #33312F;
 }
 
+/* Encabezado principal color café oscuro */
 header {
-    background-color: #2557a7;
-    color: # white;
+    background-color: #4B4038;
+    color: #FFFFFF;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
 }
 
-header h1 {
-    margin: 0 0 10px;
-}
+    /* Título principal */
+    header h1 {
+        margin: 0 0 10px;
+        font-size: 30px;
+    }
 
+    /* Descripción del encabezado */
+    header p {
+        color: #E2D8CF;
+    }
+
+/* Contenido principal */
 main {
-    max-width:900px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 0 15px;
 }
 
+/* Tarjetas del formulario y actividades */
 .contenedor {
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 25px;
-    border-radius: 10px;
-    margin-bottom. 25px;
-    box-shadow: 0 3px 10px #00000015;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px #00000012;
 }
 
+/* Subtítulos */
 h2 {
-    color: # 2457a7;
+    color: #4B4038;
 }
 
+/* Organización del formulario */
 form {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
+/* Etiquetas de los campos */
 label {
     font-weight: bold;
+    color: #4B4038;
 }
 
+/* Campos de texto y selección */
 input, textarea, select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #bbb;
-    border-radius: 6px;
+    border: 1px solid #D4CBC3;
+    border-radius: 7px;
+    background-color: #FCFBF9;
+    color: #33312F;
     font-size: 15px;
 }
 
+    /* Color del borde al seleccionar un campo */
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: #8A7565;
+    }
+
+/* Campo de descripción */
 textarea {
     min-height: 90px;
     resize: vertical;
 }
 
+/* Botones color café */
 button {
-    background-color: #2457a7;
+    background-color: #6B5748;
     color: white;
     padding: 12px 18px;
     border: none;
-    border-radius: 6px;
+    border-radius: 7px;
     cursor: pointer;
     margin-top: 10px;
-}
-
-button:hover {
-    background-color: #173d78;
-}
-
-#btnCancelar {
-    background-color: #777;
-}
-
-#btnCancelar[hidden] {
-    display: none;
-}
-
-.tarea h3 {
-    margin-top: 0;
-}
-
-.estado {
     font-weight: bold;
 }
 
+    /* Efecto al pasar el cursor */
+    button:hover {
+        background-color: #4B4038;
+    }
+
+/* Botón cancelar edición */
+#btnCancelar {
+    background-color: #77716C;
+}
+
+    /* Oculta el botón cuando no se necesita */
+    #btnCancelar[hidden] {
+        display: none;
+    }
+
+/* Tarjetas de actividades */
+.tarea {
+    background-color: #FAF8F5;
+    border: 1px solid #E5DED7;
+    border-left: 5px solid #8A7565;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+    /* Nombre de la actividad */
+    .tarea h3 {
+        margin-top: 0;
+        color: #4B4038;
+    }
+
+/* Estado de la actividad */
+.estado {
+    font-weight: bold;
+    color: #6B5748;
+}
+
+/* Contenedor de botones */
 .acciones {
     display: flex;
     gap: 10px;
 }
 
-.acciones button {
-    flex: 1;
-}
+    /* Tamaño de los botones */
+    .acciones button {
+        flex: 1;
+    }
 
+/* Adaptación para celulares */
 @media (max-width: 600px) {
     header {
         padding: 20px;
     }
+
     .contenedor {
         padding: 15px;
     }
